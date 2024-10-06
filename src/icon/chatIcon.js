@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 function ChatIcon() {
   return (
-    <div className="_panelItem_9fug5_1 _panelItem_active_9fug5_56">
+    <>
       <a className="_panelItem__container_9fug5_11" href="/mailings">
-        <span className="inline-flex items-center justify-center p-2 hover:bg-gray-200 rounded transition-colors">
+        <span className="inline-flex items-center justify-center  hover:bg-gray-200 rounded transition-colors">
           <svg
             height="18"
             viewBox="0 0 24 24"
@@ -17,7 +17,7 @@ function ChatIcon() {
         </span>
       </a>
       <div className="_panelItem__notification_9fug5_44"></div>
-    </div>
+    </>
   );
 }
 

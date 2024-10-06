@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function ManagerIcon() {
   return (
-    <div className="p-4">
+    <div className="">
       <a
         href="/managers"
-        className="flex items-center p-2 rounded-md bg-gray-200 hover:bg-gray-300 transition duration-200"
+        className="flex items-center  rounded-md bg-gray-200 hover:bg-gray-300 transition duration-200"
       >
         <span className="flex items-center">
           <svg
