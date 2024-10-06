@@ -1,0 +1,7 @@
+.icon-container {
+  transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+
+.icon-container:hover path {
+  fill: white; /* Change the color to white on hover */
+}

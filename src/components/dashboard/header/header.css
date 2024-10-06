@@ -1,0 +1,32 @@
+.arrow-container {
+  transition: background-color 0.3s ease;
+}
+
+.arrow-container:hover {
+  background-color: #3a3a3a; /* Adjust hover color as needed */
+}
+
+.implementation-bar {
+  position: relative;
+  border: 2px solid white; /* White outline */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-filled {
+  height: 100%;
+  background-color: orange; /* Orange bar */
+  position: relative; /* For positioning the ::after element */
+}
+
+.bar-filled::after {
+  content: "";
+  position: absolute;
+  right: -12px; /* Positioned to the right outside the bar */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: white; /* White small rectangular shape */
+  border-radius: 2px; /* Small rounded corners */
+}
