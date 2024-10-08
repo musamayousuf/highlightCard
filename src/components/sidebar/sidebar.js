@@ -22,12 +22,12 @@ function Sidebar() {
           >
             <ClientIcon />
           </Link>
-          <a
-            href="#loyalty"
+          <Link
+            to="/customers"
             class="flex items-center p-2 rounded justify-center hover:bg-gray-700"
           >
             <CustomerLinkIcon />
-          </a>
+          </Link>
           <a
             href="#referrals"
             class="flex items-center p-2 rounded justify-center hover:bg-gray-700"

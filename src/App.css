@@ -66,3 +66,6 @@ body {
   border: 1px solid #d5d5dd; /* your border */
   border-radius: 0.4rem; /* your border radius */
 }
+.before-question-mark::before {
+  content: "?";
+}

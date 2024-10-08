@@ -73,7 +73,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="p-4 bg-white  mt-4">
+              <div className="p-4 bg-white  pt-4">
                 <BarChart width={800} height={220} data={data}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
