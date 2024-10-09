@@ -7,6 +7,8 @@ import Cards from "./screens/cards/cards";
 import Customers from "./screens/customers/customers";
 import Mailings from "./screens/mailings/mailings";
 import Locations from "./screens/locations/locations";
+import Manager from "./screens/manager/manager";
+import Settings from "./screens/settings/settings";
 
 const App = () => {
   return (
@@ -15,7 +17,7 @@ const App = () => {
         <Header />
         <div className="main-content">
           <Sidebar />
-          <div className="ml-12 p-4 ">
+          <div className="ml-[3rem] ">
             <Routes>
               <Route path="/home" element={<Home />} />{" "}
               <Route path="/" element={<Home />} exact />{" "}
@@ -23,6 +25,8 @@ const App = () => {
               <Route path="/customers" element={<Customers />} exact />{" "}
               <Route path="/mailings" element={<Mailings />} exact />{" "}
               <Route path="/locations" element={<Locations />} exact />{" "}
+              <Route path="/manager" element={<Manager />} exact />{" "}
+              <Route path="/settings" element={<Settings />} exact />{" "}
               {/* <Route path="*" element={<h2>404 Not Found</h2>} />{" "} */}
             </Routes>
           </div>

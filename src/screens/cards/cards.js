@@ -8,7 +8,7 @@ import DeleteIcon from "../../icon/deleteIcon";
 
 function Cards() {
   return (
-    <div className="flex items-center ml-5 mt-3">
+    <div className="flex items-center ml-5  my-16">
       <div className="flex flex-col items-center w-[300px]">
         <div className="text-[#87879c] mb-6 bg-[#eaeaed] px-3 inline-flex justify-center items-center rounded-xl">
           <span className="h-2 w-2 mr-2 bg-[#1dcd27] rounded-lg text-center inline-block"></span>
@@ -24,7 +24,7 @@ function Cards() {
           />
         </div>
         <div className="mb-4">
-          <p className="font-bold text-center my-4">Create Card</p>
+          <p className="font  -bold text-center my-4">Create Card</p>
           <PrimaryButton title={"Template"} />
         </div>
         <SecondaryButton title={"From Scratch"} />

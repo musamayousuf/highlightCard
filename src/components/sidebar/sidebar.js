@@ -50,14 +50,14 @@ function Sidebar() {
           <LocationIcon isSelected={selectedIcon === "locations"} />
         </Link>
         <Link
-          to="#manager"
+          to="/manager"
           onClick={() => setSelectedIcon("manager")}
           className="flex items-center justify-center  rounded"
         >
           <ManagerIcon isSelected={selectedIcon === "manager"} />
         </Link>
         <Link
-          to="#settings"
+          to="/settings"
           onClick={() => setSelectedIcon("settings")}
           className="flex items-center justify-center  rounded"
         >
