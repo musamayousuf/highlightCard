@@ -19,7 +19,7 @@ const data = [
 
 const Home = () => {
   return (
-    <div>
+    <>
       <div class=" bg-[#F7F7F8] ">
         <div className="p-4 ">
           <div className="flex justify-between mb-2">
@@ -347,7 +347,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

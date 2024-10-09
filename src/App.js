@@ -5,6 +5,8 @@ import Sidebar from "./components/sidebar/sidebar";
 import Home from "./screens/home/home";
 import Cards from "./screens/cards/cards";
 import Customers from "./screens/customers/customers";
+import Mailings from "./screens/mailings/mailings";
+import Locations from "./screens/locations/locations";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
               <Route path="/" element={<Home />} exact />{" "}
               <Route path="/cards" element={<Cards />} exact />{" "}
               <Route path="/customers" element={<Customers />} exact />{" "}
+              <Route path="/mailings" element={<Mailings />} exact />{" "}
+              <Route path="/locations" element={<Locations />} exact />{" "}
               {/* <Route path="*" element={<h2>404 Not Found</h2>} />{" "} */}
             </Routes>
           </div>
