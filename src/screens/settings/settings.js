@@ -1,6 +1,28 @@
 import React from "react";
 import PrimaryButton from "../../components/button/primary-button";
 import Manager from "../manager/manager";
+import PlusIcon from "../../icon/plusIcon";
+import MinusIcon from "../../icon/minusIcon";
+import Dropdown from "../../components/dropdown/dropdown";
+
+const ActiveCircle = () => {
+  return (
+    <div className="p-4 flex justify-center items-center ">
+      <div className="bg-[#1dcd27] flex justify-center items-center rounded-full w-10 h-10">
+        <PlusIcon width="13px" color="white" />
+      </div>
+    </div>
+  );
+};
+const DeactiveCircle = () => {
+  return (
+    <div className="p-4 flex justify-center items-center ">
+      <div className="bg-[#ff0030] flex justify-center items-center rounded-full w-10 h-10">
+        <MinusIcon width="13px" color="white" />
+      </div>
+    </div>
+  );
+};
 
 const plan = [
   {
@@ -34,7 +56,7 @@ const plan = [
 
 function Settings() {
   return (
-    <div className="p-8">
+    <div className="p-8 bg-[#f7f7f8]">
       <div className="flex justify-between items-center">
         <div>
           <p className="text-2xl">Plan</p>
@@ -46,7 +68,7 @@ function Settings() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 mt-5 space-x-5">
+      <div className="grid grid-cols-2 mt-5 space-x-5 bg-white">
         <div>
           <div className="flex p-10 border border-gray-300 rounded-sm">
             <p className="w-2/3 font-semibold">Plan</p>
@@ -125,6 +147,142 @@ function Settings() {
               </ul>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div>
+        <p className="text-2xl">Compare plans</p>
+        <div class="bg-gray-100 pt-6">
+          <div class="mx-auto bg-white shadow-md rounded-lg">
+            <div
+              className="grid grid-cols-4 border-b sticky top-[4.1rem] z-50 bg-white "
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div className="p-4 text-gray-500 text-xs font-semibold border-r">
+                FEATURES
+              </div>
+              <div className="p-4 text-gray-500 text-xs font-semibold border-r text-center">
+                START
+              </div>
+              <div className="p-4 text-gray-500 text-xs font-semibold border-r text-center">
+                GROW
+              </div>
+              <div className="p-4 text-gray-500 text-xs font-semibold border-r text-center">
+                BUSINESS
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4  border-b font-bold">
+                Cost per month
+                <div className="font-normal text-gray-500">
+                  for annual plan <br />/ for quarterly plan <br />/ for monthly
+                  plan
+                </div>
+              </div>
+              <div class="p-4 text-center ">
+                <div className="font-semibold">$19</div>
+                <div class="text-gray-500">/$22</div>
+                <div class="text-gray-500">/$25</div>
+              </div>
+              <div class="p-4 text-center ">
+                <div className="font-semibold">$35</div>
+                <div class="text-gray-500">/$39</div>
+                <div class="text-gray-500">/$45</div>
+              </div>
+              <div class="p-4 text-center">
+                <div className="font-semibold">$69</div>
+                <div class="text-gray-500">/$79</div>
+                <div class="text-gray-500">/$85</div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4 font-bold ">
+                Promotions available
+                <div className="font-normal text-gray-500">
+                  You can use one of 8 card types for your promotions
+                </div>
+              </div>
+              <div class="p-4 text-center ">1</div>
+              <div class="p-4 text-center ">3</div>
+              <div class="p-4 text-center">10</div>
+            </div>
+
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4   font-bold">Stamp cards</div>
+              <ActiveCircle />
+              <ActiveCircle />
+
+              <ActiveCircle />
+            </div>
+
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4 font-bold ">Multipass cards</div>
+              <ActiveCircle />
+              <ActiveCircle />
+
+              <DeactiveCircle />
+            </div>
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4  font-bold ">
+                Autopush designer
+                <div className="font-normal text-gray-500">
+                  Create your own automated push script. Create an unlimited
+                  number of automated messages for free.
+                </div>
+              </div>
+              <DeactiveCircle />
+              <ActiveCircle />
+
+              <DeactiveCircle />
+            </div>
+            <div
+              class="grid grid-cols-4 border-b hover:bg-gray-100"
+              style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+            >
+              <div class="p-4  font-bold ">Payment period</div>
+              <div className="py-5 grid place-items-center">
+                <div className="w-40 ">
+                  <Dropdown title={"Year"} width="w-full" />
+                </div>
+                <div className="w-40 mt-4">
+                  <PrimaryButton title={"Buy"} width="w-full" />
+                </div>
+              </div>
+              <div className="py-5 grid place-items-center">
+                <div className="w-40 ">
+                  <Dropdown title={"Year"} width="w-full" />
+                </div>
+                <div className="w-40 mt-4">
+                  <PrimaryButton title={"Buy"} width="w-full" />
+                </div>
+              </div>
+              <div className="py-5 grid place-items-center">
+                <div className="w-40 ">
+                  <Dropdown title={"Year"} width="w-full" />
+                </div>
+                <div className="w-40 mt-4">
+                  <PrimaryButton title={"Buy"} width="w-full" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
