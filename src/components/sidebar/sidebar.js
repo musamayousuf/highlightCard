@@ -18,8 +18,8 @@ function Sidebar({ onIconClick }) {
   };
 
   return (
-    <div className="fixed top-5 mt-5 left-0 bottom-0 w-14 bg-[#EAEAED] text-white flex flex-col p-4">
-      <div className="flex flex-col space-y-2 mt-16">
+    <div className="fixed top-5 mt-7 left-0 bottom-0 w-14 bg-[#EAEAED] text-white flex flex-col p-4">
+      <div className="flex flex-col space-y-1 mt-16">
         <Link
           to="/home"
           onClick={() => handleIconClick("home")}
