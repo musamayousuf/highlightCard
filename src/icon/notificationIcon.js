@@ -2,8 +2,7 @@ import React from "react";
 
 const ControlIcon = () => {
   return (
-    <a
-      href="/"
+    <div
       className="_control__icon_g5txz_5 flex items-center justify-center h-full cursor-pointer transition-colors duration-300"
       style={{
         height: "100%",
@@ -27,7 +26,7 @@ const ControlIcon = () => {
           fill="currentColor"
         />
       </svg>
-    </a>
+    </div>
   );
 };
 
