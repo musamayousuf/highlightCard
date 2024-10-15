@@ -13,8 +13,8 @@ import SettingHeader from "./screens/settings/settingHeader";
 
 const App = () => {
   const [showSettingHeader, setShowSettingHeader] = useState(false);
+  const [activeSettingSection, setActiveSettingSection] = useState("plan"); // Track active section
 
-  // Debugging: check if icon name is correct
   const handleSidebarIconClick = (icon) => {
     console.log("Icon clicked:", icon);
     if (icon === "settings") {
@@ -24,16 +24,20 @@ const App = () => {
     }
   };
 
+  const handleSectionChange = (section) => {
+    setActiveSettingSection(section); // Update the active settings section
+  };
+
   return (
     <Router>
       <div className="app">
         <Header />
-        {showSettingHeader && <SettingHeader />}{" "}
-        {/* Conditionally render SettingHeader */}
+        {showSettingHeader && (
+          <SettingHeader onSectionSelect={handleSectionChange} /> // Pass the handler to SettingHeader
+        )}
         <div className="main-content">
-          <Sidebar onIconClick={handleSidebarIconClick} />{" "}
-          {/* Pass the callback to Sidebar */}
-          <div className="ml-[3rem] ">
+          <Sidebar onIconClick={handleSidebarIconClick} />
+          <div className="ml-[3rem]">
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/" element={<Home />} exact />
@@ -42,7 +46,11 @@ const App = () => {
               <Route path="/mailings" element={<Mailings />} exact />
               <Route path="/locations" element={<Locations />} exact />
               <Route path="/manager" element={<Manager />} exact />
-              <Route path="/settings" element={<Settings />} exact />
+              <Route
+                path="/settings"
+                element={<Settings activeSection={activeSettingSection} />}
+                exact
+              />
             </Routes>
           </div>
         </div>
