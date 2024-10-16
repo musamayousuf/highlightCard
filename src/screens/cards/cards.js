@@ -5,8 +5,11 @@ import ActivateIcon from "../../icon/activateIcon";
 import DownloadIcon from "../../icon/downloadIcon";
 import CopyIcon from "../../icon/copyIcon";
 import DeleteIcon from "../../icon/deleteIcon";
+import { useNavigate } from "react-router-dom";
+import mobileATV from "../../assets/aaaa.PNG";
 
 function Cards() {
+  const navigate = useNavigate();
   return (
     <div className="flex items-center ml-5  my-16">
       <div className="flex flex-col items-center w-[300px]">
@@ -20,6 +23,7 @@ function Cards() {
             width="280"
             height="260"
             className="cursor-pointer object-cover"
+            onClick={() => navigate("./templates")}
             src="https://app.highlightcards.co.uk/assets/frame-empty-D0erFwVy.svg"
           />
         </div>
@@ -35,12 +39,7 @@ function Cards() {
           <span className="h-2 w-2 mr-2 bg-[#ff0030] rounded-lg text-center inline-block"></span>
           Stamp
         </div>
-        <img
-          alt="card"
-          width="280"
-          className=""
-          src="https://app.highlightcards.co.uk/assets/frame-ios2-BzgspNfB.svg"
-        />
+        <img alt="card" width="280" className="" src={mobileATV} />
         <div className="mb-4">
           <p className="font-bold text-center my-4">ATV rental</p>
           <PrimaryButton title={"Open"} />

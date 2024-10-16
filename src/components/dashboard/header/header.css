@@ -30,3 +30,7 @@
   background-color: white; /* White small rectangular shape */
   border-radius: 2px; /* Small rounded corners */
 }
+
+.hr-slim {
+  border-width: 0.5px;
+}

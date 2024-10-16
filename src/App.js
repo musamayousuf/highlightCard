@@ -10,6 +10,7 @@ import Locations from "./screens/locations/locations";
 import Manager from "./screens/manager/manager";
 import Settings from "./screens/settings/settings";
 import SettingHeader from "./screens/settings/settingHeader";
+import CardRoutes from "./screens/cards/routes/routes";
 
 const App = () => {
   const [showSettingHeader, setShowSettingHeader] = useState(false);
@@ -41,7 +42,7 @@ const App = () => {
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/" element={<Home />} exact />
-              <Route path="/cards" element={<Cards />} exact />
+              <Route path="/cards/*" element={<CardRoutes />} />
               <Route path="/customers" element={<Customers />} exact />
               <Route path="/mailings" element={<Mailings />} exact />
               <Route path="/locations" element={<Locations />} exact />

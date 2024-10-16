@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-function SettingIcon({ isSelected, color }) {
+const SideBarSettingIcon = ({ isSelected, className }) => {
   return (
     <span
-      className={`inline-flex items-center justify-center p-3 rounded transition-colors ${
+      className={`inline-flex items-center justify-center rounded transition-colors ${
         isSelected
           ? "bg-[#454545] text-white"
           : "hover:bg-[#454545] hover:text-white"
@@ -11,11 +11,10 @@ function SettingIcon({ isSelected, color }) {
     >
       <svg
         height="18"
-        viewBox="0 0 23 24"
+        viewBox="0 0 24 24"
         width="18"
-        style={{ fill: color || (isSelected ? "white" : "#454545") }}
         xmlns="http://www.w3.org/2000/svg"
-        className={`fill-current transition-colors ${
+        className={`fill-current transition-colors ${className} ${
           isSelected ? "text-white" : "text-gray-800 hover:text-white"
         }`}
       >
@@ -23,6 +22,6 @@ function SettingIcon({ isSelected, color }) {
       </svg>
     </span>
   );
-}
+};
 
-export default SettingIcon;
+export default SideBarSettingIcon;

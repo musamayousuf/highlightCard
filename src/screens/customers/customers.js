@@ -4,7 +4,6 @@ import SmileIcon from "../../icon/smileIcon";
 import RfmIcon from "../../icon/rfmIcon";
 import CommunicationIcon from "../../icon/communicationIcon";
 import PlusIcon from "../../icon/plusIcon";
-import Settingcon from "../../icon/settingIcon";
 import FilterIcon from "../../icon/filterIcon";
 import FolderIcon from "../../icon/folderIcon";
 import Dropdown from "../../components/dropdown/dropdown";
@@ -13,6 +12,8 @@ import DropdownArrow from "../../icon/dropdownIcon";
 import DownArrowIcon from "../../icon/downArrowIcon";
 import SecondaryButton from "../../components/button/secondary-button";
 import PrimaryButton from "../../components/button/primary-button";
+import SettingIcon from "../../icon/settingIcon";
+import SettingsIcon from "../../icon/settinginsideIcon";
 
 function Customers() {
   return (
@@ -77,7 +78,7 @@ function Customers() {
             <PlusIcon />
           </button>
           <button className=" my-3 px-3 py-2 text-center rounded-md hover:bg-[#454545] hover:text-white text-xs text-gray-500 group flex items-center justify-center">
-            <Settingcon />
+            <SettingIcon color={"white"} />
           </button>
         </div>
         <div className="flex items-center space-x-4 my-7">

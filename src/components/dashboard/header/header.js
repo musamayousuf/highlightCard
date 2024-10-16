@@ -4,6 +4,12 @@ import ControlIcon from "../../../icon/notificationIcon";
 import HighlightCardLink from "../../../icon/highlightLinkIcon";
 import ProfileIcon from "../../../icon/profileIcon";
 import RfmIcon from "../../../icon/rfmIcon";
+import SettingIcon from "../../../icon/settingIcon";
+import PlusCircleIcon from "../../../icon/plusCircleIcon";
+import StatisticsIcon from "../../../icon/statisticsIcon";
+import ScannerAppIcon from "../../../icon/scannerIcon";
+import LogoutIcon from "../../../icon/logIcon";
+import SettingsIcon from "../../../icon/settinginsideIcon";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -60,7 +66,7 @@ const Header = () => {
 
             {/* Dropdown Menu */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 w-[33.5rem] bg-[#2e2e2e] text-white shadow-lg z-10">
+              <div className="absolute top-full left-0 w-[33.5rem] bg-[#2e2e2e] text-white shadow-lg z-50">
                 <div className="px-4 py-5 border-b border-gray-600 bg-[#454545]">
                   <span className="font-semibold">
                     <span className="font-light p-2">Trial</span>Start
@@ -138,7 +144,7 @@ const Header = () => {
 
             {/* Implementation Dropdown */}
             {isImplementationDropdownOpen && (
-              <div className="absolute top-full left-0 w-[15rem] bg-[#2e2e2e] text-white shadow-lg z-10 ">
+              <div className="absolute top-full left-0 w-[15rem] bg-[#2e2e2e] text-white shadow-lg z-50 ">
                 <div className="pl-4 pt-2 pb-5">
                   <p className="font-semibold">
                     Stage: <br />
@@ -167,7 +173,7 @@ const Header = () => {
         >
           <ControlIcon />
           {isControlDropdownOpen && (
-            <div className="p-5 absolute top-full right-[4.5] w-auto h-32 bg-[#2e2e2e] text-white shadow-lg z-10">
+            <div className="p-5 absolute top-full right-[4.5] w-auto h-32 bg-[#2e2e2e] text-white shadow-lg z-50">
               <p className="mb-4 text-sm">Mailing progress</p>
               <div className="implementation-bar w-56 h-2 bg-black border border-white rounded-sm">
                 <div
@@ -205,32 +211,48 @@ const Header = () => {
 
           {/* Dropdown Menu */}
           {isProfileDropdownOpen && (
-            <div className="absolute top-full right-[-24px] w-56 bg-[#2e2e2e] text-white shadow-lg z-10  ">
-              <ul className="py-2">
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+            <div className="absolute top-full right-[-24px] w-64  pt-2 bg-[#2e2e2e] text-white shadow-lg z-50  ">
+              <ul className="">
+                <li className="pl-8 py-4 hover:bg-[#454545] flex items-center">
+                  <ProfileIcon className={"text-white "} />
                   <span className="ml-4"> My Profile</span>
                 </li>
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+                <hr className=" border-gray-600" />
+
+                <li className="pl-8  px-4 py-4 hover:bg-[#454545] flex items-center">
+                  <PlusCircleIcon width="24" className={"text-white "} />
+
                   <span className="ml-4"> Create Card</span>
                 </li>
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+                <hr className=" border-gray-600" />
+
+                <li className="px-4 pl-8  py-4 hover:bg-[#454545] flex items-center">
+                  <StatisticsIcon width="24" className={"text-white "} />
+
                   <span className="ml-4"> Statistics</span>
                 </li>
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+                <hr className=" border-gray-600" />
+
+                <li className="px-4 pl-8  py-4 hover:bg-[#454545] flex items-center">
+                  <SettingsIcon width="24" color="white" />
+
                   <span className="ml-4"> Settings</span>
                 </li>
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+                <hr className=" border-gray-600" />
+
+                <li className="px-4 pl-8  py-4 hover:bg-[#454545] flex items-center">
+                  <ScannerAppIcon width="24" className={"text-white "} />
+
                   <span className="ml-4"> Scanner App</span>
                 </li>
-                <li className="px-4 py-2 hover:bg-[#454545] flex items-center">
-                  <RfmIcon />
+                <hr className=" border-gray-600" />
+
+                <li className="px-4 pl-8  py-4 hover:bg-[#454545] flex items-center">
+                  <LogoutIcon width="24" className={"text-white "} />
+
                   <span className="ml-4"> Log Out</span>
                 </li>
+                <hr className=" border-gray-600" />
               </ul>
             </div>
           )}

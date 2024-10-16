@@ -11,10 +11,10 @@ function SettingHeader({ onSectionSelect }) {
   };
 
   return (
-    <div className="sticky top-[4rem] z-[50] bg-[#2E2E2E] h-16">
-      <div className="pl-1 flex items-center pt-2 space-x-6">
+    <div className="sticky top-[4rem] z-[10] bg-[#2E2E2E] h-16">
+      <div className="pl-5 flex items-center pt-2 space-x-6">
         <div>
-          <SettingsIcon color={"white"} size={"24"} />
+          <SettingsIcon width="28" color="white" />
         </div>
         <SettingHeaderButton
           title={"Plan"}

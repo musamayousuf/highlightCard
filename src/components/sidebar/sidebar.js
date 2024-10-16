@@ -4,7 +4,7 @@ import ClientIcon from "../../icon/clientIcon";
 import ChatIcon from "../../icon/chatIcon";
 import CustomerLinkIcon from "../../icon/customerLinkIcon";
 import ManagerIcon from "../../icon/managerIcon";
-import SettingIcon from "../../icon/settingIcon";
+import SideBarSettingIcon from "../../icon/settingIcon";
 import { Link } from "react-router-dom";
 import LocationIcon from "../../icon/locationIcon";
 
@@ -67,10 +67,7 @@ function Sidebar({ onIconClick }) {
           onClick={() => handleIconClick("settings")}
           className="flex items-center justify-center rounded"
         >
-          <SettingIcon
-            size={"white"}
-            isSelected={selectedIcon === "settings"}
-          />
+          <SideBarSettingIcon className={"m-3"} color={"white"} />
         </Link>
       </div>
     </div>
