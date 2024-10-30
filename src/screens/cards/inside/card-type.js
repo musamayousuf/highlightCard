@@ -3,6 +3,10 @@ import Inputfield from "../../../components/inputField/inputfield";
 import PrimaryButton from "../../../components/button/primary-button";
 import StampIcon from "../../../icon/stampIcon";
 import SecondaryButton from "../../../components/button/secondary-button";
+import RewardIcon from "../../../icon/rewardIcon";
+import MembershipIcon from "../../../icon/membershipIcon";
+import DiscountIcon from "../../../icon/discountIcon";
+import CashBackIcon from "../../../icon/cashbackIcon";
 
 function CardType() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -10,56 +14,59 @@ function CardType() {
   const items = [
     {
       label: "Stamp",
-      description: "High Retension",
-      iconSize: 25,
+      description: "High Retention",
       bgColor: "",
       textColor: "",
+      icon: <StampIcon width={29} />,
     },
     {
       label: "Reward",
-      iconSize: 25,
-      description: "High Retension",
+      description: "High Retention",
       bgColor: "",
       textColor: "",
+      icon: <RewardIcon width={29} />,
     },
     {
       label: "Membership",
-      iconSize: 25,
+      description: "High Retention",
+      bgColor: "",
+      textColor: "",
+      icon: <MembershipIcon width={29} />,
+    },
+    {
+      label: "Membership",
+      description: "High Retension",
+      bgColor: "",
+      textColor: "",
+      icon: <DiscountIcon width={29} />,
+    },
+    {
+      label: "Stamp",
+      description: "High Retension",
+      bgColor: "",
+      textColor: "",
+      icon: <CashBackIcon width={29} />,
+    },
+    {
+      label: "Stamp",
       description: "High Retension",
       bgColor: "",
       textColor: "",
     },
     {
       label: "Stamp",
-      iconSize: 25,
-      description: "High Retension",
-      bgColor: "",
-      textColor: "",
-    },
-    {
-      label: "Stamp",
-      iconSize: 25,
-      description: "High Retension",
-      bgColor: "",
-      textColor: "",
-    },
-    {
-      label: "Stamp",
-      iconSize: 25,
       description: "Best for acquisition",
       bgColor: "",
       textColor: "",
     },
     {
       label: "Stamp",
-      iconSize: 25,
       description: "Best for acquisition",
       bgColor: "",
       textColor: "",
     },
     {
       label: "Stamp",
-      iconSize: 25,
       description: "Best for acquisition",
       bgColor: "",
       textColor: "",
@@ -69,9 +76,7 @@ function CardType() {
   return (
     <div>
       <div className="relative min-h-screen">
-        {/* Container for the entire view */}
         <div className="grid grid-cols-2 ml-2">
-          {/* Left Side - Card Type Selection */}
           <div className="relative bg-[#f7f7f8] p-7">
             <div className="flex items-center">
               <p className="text-2xl font-semibold text-gray-500">Card Type</p>
@@ -88,10 +93,15 @@ function CardType() {
                       isSelected ? "bg-black text-white" : item.bgColor
                     }`}
                   >
-                    <StampIcon
-                      width={item.iconSize}
-                      className={`mb-2 ${isSelected ? "text-white" : ""}`}
-                    />
+                    {/* Only render the icon if it exists */}
+                    {item.icon && (
+                      <div className={`mb-2 ${isSelected ? "text-white" : ""}`}>
+                        {React.cloneElement(item.icon, {
+                          className: isSelected ? "text-white" : "",
+                        })}
+                      </div>
+                    )}
+
                     <p
                       className={`text-center ${
                         isSelected ? "text-white" : item.textColor
@@ -119,7 +129,6 @@ function CardType() {
               <PrimaryButton title="Continue" width="w-full" />
             </div>
 
-            {/* Add vertical line */}
             <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div>
           </div>
 

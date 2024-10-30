@@ -1,6 +1,6 @@
 import React from "react";
 
-function QuestionIcon({ height = "", width = "", color = "currentColor" }) {
+function RewardIcon({ height = "", width = "", color = "currentColor" }) {
   return (
     <svg
       width={width}
@@ -17,4 +17,4 @@ function QuestionIcon({ height = "", width = "", color = "currentColor" }) {
   );
 }
 
-export default QuestionIcon;
+export default RewardIcon;
