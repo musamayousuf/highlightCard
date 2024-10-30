@@ -34,7 +34,6 @@ function Cards() {
         </div>
         <SecondaryButton title={"From Scratch"} />
       </div>
-
       <div className="ml-5 flex flex-col items-center w-[300px]">
         <div className="text-[#87879c] mb-[1.2rem] bg-[#eaeaed] px-3 inline-flex justify-center items-center rounded-xl">
           <span className="h-2 w-2 mr-2 bg-[#ff0030] rounded-lg text-center inline-block"></span>

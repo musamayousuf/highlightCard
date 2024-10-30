@@ -40,8 +40,7 @@ const App = () => {
         {showSettingHeader && (
           <SettingHeader onSectionSelect={handleSectionChange} />
         )}
-        {/* Place useLocation inside the Router */}
-        <CardHeaderDisplay />
+        <CardHeaderDisplay onSectionSelect={handleSectionChange} />
         <div className="main-content">
           <Sidebar onIconClick={handleSidebarIconClick} />
           <div className="ml-[3rem]">
@@ -69,10 +68,12 @@ const App = () => {
   );
 };
 
-// New component to conditionally display CardHeader
-const CardHeaderDisplay = () => {
-  const location = useLocation(); // Now useLocation is within the Router
-  return location.pathname === "/cards/create" ? <CardHeader /> : null;
+// Updated CardHeaderDisplay to accept onSectionSelect prop
+const CardHeaderDisplay = ({ onSectionSelect }) => {
+  const location = useLocation();
+  return location.pathname === "/cards/create" ? (
+    <CardHeader onSectionSelect={onSectionSelect} />
+  ) : null;
 };
 
 export default App;

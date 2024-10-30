@@ -8,7 +8,9 @@ import FormDropdown from "../../../components/dropdown/formDropdown";
 function PersonalSettings() {
   return (
     <div>
-      <div className="text-2xl">Personal Settings</div>
+      <div className="flex items-center p-7">
+        <p className="text-2xl font-semibold text-gray-500">Card Type</p>
+      </div>
       <div className="grid grid-cols-[30%,70%]">
         <div className=" h-[27rem] mt-5 rounded-sm shadow-md w-[22rem] pt-8 pl-6 pr-6  border border-gray-300 bg-white">
           <div className="">

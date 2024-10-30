@@ -4,8 +4,8 @@ const HighlightCardLink = () => {
   return (
     <div className="h-full flex items-center justify-center transition-colors duration-300 cursor-pointers">
       <a
-        href="#"
-        target="_blank"
+        // href="#"
+        // target="_blank"
         rel="noreferrer"
         className="_control__icon_g5txz_5"
       >

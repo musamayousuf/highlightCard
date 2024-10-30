@@ -1,6 +1,6 @@
 import React from "react";
 
-function CashBackIcon({ height = "", width = "", color = "currentColor" }) {
+function CouponIcon({ height = "", width = "", color = "currentColor" }) {
   return (
     <svg
       width={width}
@@ -25,4 +25,4 @@ function CashBackIcon({ height = "", width = "", color = "currentColor" }) {
   );
 }
 
-export default CashBackIcon;
+export default CouponIcon;

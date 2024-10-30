@@ -7,6 +7,9 @@ import RewardIcon from "../../../icon/rewardIcon";
 import MembershipIcon from "../../../icon/membershipIcon";
 import DiscountIcon from "../../../icon/discountIcon";
 import CashBackIcon from "../../../icon/cashbackIcon";
+import CouponIcon from "../../../icon/couponIcon";
+import MultipassIcon from "../../../icon/multipassIcon";
+import GiftIcon from "../../../icon/giftIcon";
 
 function CardType() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -52,24 +55,21 @@ function CardType() {
       description: "High Retension",
       bgColor: "",
       textColor: "",
+      icon: <CouponIcon width={29} />,
     },
     {
       label: "Stamp",
       description: "Best for acquisition",
       bgColor: "",
       textColor: "",
+      icon: <MultipassIcon width={29} />,
     },
     {
       label: "Stamp",
       description: "Best for acquisition",
       bgColor: "",
       textColor: "",
-    },
-    {
-      label: "Stamp",
-      description: "Best for acquisition",
-      bgColor: "",
-      textColor: "",
+      icon: <GiftIcon width={29} />,
     },
   ];
 
@@ -81,7 +81,7 @@ function CardType() {
             <div className="flex items-center">
               <p className="text-2xl font-semibold text-gray-500">Card Type</p>
             </div>
-            <hr className="my-12" />
+            <hr className="mt-6 mb-10" />
             <div className="grid grid-cols-3 gap-4">
               {items.map((item, index) => {
                 const isSelected = selectedItem === index;
