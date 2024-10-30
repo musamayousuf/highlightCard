@@ -13,7 +13,6 @@ import DownArrowIcon from "../../icon/downArrowIcon";
 import SecondaryButton from "../../components/button/secondary-button";
 import PrimaryButton from "../../components/button/primary-button";
 import SettingIcon from "../../icon/settingIcon";
-import SettingsIcon from "../../icon/settinginsideIcon";
 
 function Customers() {
   return (

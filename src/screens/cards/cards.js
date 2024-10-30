@@ -10,6 +10,7 @@ import mobileATV from "../../assets/aaaa.PNG";
 
 function Cards() {
   const navigate = useNavigate();
+
   return (
     <div className="flex items-center ml-5  my-16">
       <div className="flex flex-col items-center w-[300px]">
@@ -27,7 +28,7 @@ function Cards() {
             src="https://app.highlightcards.co.uk/assets/frame-empty-D0erFwVy.svg"
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4" onClick={() => navigate("./templates")}>
           <p className="font  -bold text-center my-4">Create Card</p>
           <PrimaryButton title={"Template"} />
         </div>
@@ -42,7 +43,9 @@ function Cards() {
         <img alt="card" width="280" className="" src={mobileATV} />
         <div className="mb-4">
           <p className="font-bold text-center my-4">ATV rental</p>
-          <PrimaryButton title={"Open"} />
+          <div onClick={() => navigate("./create")}>
+            <PrimaryButton title={"Open"} />
+          </div>
         </div>
         <div className="flex">
           <p className="before-question-mark pr-20"></p>

@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/dashboard/header/header";
 import Sidebar from "./components/sidebar/sidebar";
 import Home from "./screens/home/home";
-import Cards from "./screens/cards/cards";
 import Customers from "./screens/customers/customers";
 import Mailings from "./screens/mailings/mailings";
 import Locations from "./screens/locations/locations";
@@ -11,13 +15,13 @@ import Manager from "./screens/manager/manager";
 import Settings from "./screens/settings/settings";
 import SettingHeader from "./screens/settings/settingHeader";
 import CardRoutes from "./screens/cards/routes/routes";
+import CardHeader from "./screens/cards/cardHeader";
 
 const App = () => {
   const [showSettingHeader, setShowSettingHeader] = useState(false);
-  const [activeSettingSection, setActiveSettingSection] = useState("plan"); // Track active section
+  const [activeSettingSection, setActiveSettingSection] = useState("plan");
 
   const handleSidebarIconClick = (icon) => {
-    console.log("Icon clicked:", icon);
     if (icon === "settings") {
       setShowSettingHeader(true);
     } else {
@@ -26,7 +30,7 @@ const App = () => {
   };
 
   const handleSectionChange = (section) => {
-    setActiveSettingSection(section); // Update the active settings section
+    setActiveSettingSection(section);
   };
 
   return (
@@ -34,15 +38,20 @@ const App = () => {
       <div className="app">
         <Header />
         {showSettingHeader && (
-          <SettingHeader onSectionSelect={handleSectionChange} /> // Pass the handler to SettingHeader
+          <SettingHeader onSectionSelect={handleSectionChange} />
         )}
+        {/* Place useLocation inside the Router */}
+        <CardHeaderDisplay />
         <div className="main-content">
           <Sidebar onIconClick={handleSidebarIconClick} />
           <div className="ml-[3rem]">
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/" element={<Home />} exact />
-              <Route path="/cards/*" element={<CardRoutes />} />
+              <Route
+                path="/cards/*"
+                element={<CardRoutes activeSection={activeSettingSection} />}
+              />
               <Route path="/customers" element={<Customers />} exact />
               <Route path="/mailings" element={<Mailings />} exact />
               <Route path="/locations" element={<Locations />} exact />
@@ -58,6 +67,12 @@ const App = () => {
       </div>
     </Router>
   );
+};
+
+// New component to conditionally display CardHeader
+const CardHeaderDisplay = () => {
+  const location = useLocation(); // Now useLocation is within the Router
+  return location.pathname === "/cards/create" ? <CardHeader /> : null;
 };
 
 export default App;

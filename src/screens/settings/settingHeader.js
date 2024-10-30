@@ -3,11 +3,11 @@ import SettingHeaderButton from "../../components/button/settingHeaderButton";
 import SettingsIcon from "../../icon/settinginsideIcon";
 
 function SettingHeader({ onSectionSelect }) {
-  const [activeButton, setActiveButton] = useState("plan"); // Default active button
+  const [activeButton, setActiveButton] = useState("plan");
 
   const handleButtonClick = (section) => {
-    setActiveButton(section); // Set the active button
-    onSectionSelect(section); // Call the passed function to change the active section
+    setActiveButton(section);
+    onSectionSelect(section);
   };
 
   return (
